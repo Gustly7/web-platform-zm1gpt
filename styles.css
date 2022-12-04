@@ -18,8 +18,6 @@
 .grid-container > div {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
 }
 
 .fat {
@@ -37,17 +35,33 @@
   background-size: 75px;
   background-repeat: repeat-x;
   background-image: url('./pony2.png');
-  animation: gradient 1s linear infinite;
+  animation: ponyright 1s linear infinite;
 }
 
-@keyframes gradient {
+.animation-left {
+  animation: ponyleft 1s linear infinite;
+}
+
+@keyframes ponyright {
   0% {
-    background-position: 0% -20px;
+    background-position: 0 -20px;
   }
   50% {
     background-position: 75px 20px;
   }
   100% {
     background-position: 150px -20px;
+  }
+}
+
+@keyframes ponyleft {
+  0% {
+    background-position: 150px -20px;
+  }
+  50% {
+    background-position: 75px 20px;
+  }
+  100% {
+    background-position: 0 -20px;
   }
 }
