@@ -1,0 +1,53 @@
+.width-33-per {
+  width: 33%;
+}
+
+.width-65-px-fixed {
+  min-width: 65px;
+  max-width: 65px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) repeat(2, 65px);
+  grid-gap: 2px;
+  background-color: #2196f3;
+  padding: 2px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.fat {
+  grid-row: span 2;
+  display: inline-grid;
+  align-items: center;
+}
+
+.divider {
+  background-image: linear-gradient(#ee7752, #e73c7e, #23a6d5, #23d5ab);
+}
+
+.pony {
+  height: 75px;
+  background-size: 75px;
+  background-repeat: repeat-x;
+  background-image: url('./pony2.png');
+  animation: gradient 1s linear infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% -20px;
+  }
+  50% {
+    background-position: 75px 20px;
+  }
+  100% {
+    background-position: 150px -20px;
+  }
+}
